@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;1,900&display=swap');
+
+:root {
+  --action-bg-color: #1992d4;
+  --header-bg-color: white;
+  --main-bg-color: #e2e8f0;
+  --main-text-hdr-color: black;
+  --sub-text-color: grey;
+  --font-size: 25px;
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  --sidebar-unit: 1rem;
+  --sidebar-text-unit: calc(var(--sidebar-unit)*0.65);
+  --button-width: calc(var(--sidebar-text-unit)*5);
+  --grid-row-height: calc(var(--sidebar-unit)*3);
+  --padding: var(--sidebar-unit);
+  --gap: var(--sidebar-text-unit);    
+  --content-height: 600px;
+  --content-width: calc(var(--button-width)*3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  background-color: var(--header-bg-color);
+  color: var(--main-text-hdr-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.board {
+  display:grid;
+  grid-template: 170px 170px 170px/170px 170px 170px;
+  gap: var(--gap);
+  /* padding: var(--padding); */
+  border-style: none;
+}
+
+.card img {
+  width: 80px;
+  height: 120px;
+}
+
+.card, .scoreCard {
+  display: flex;
+  flex-direction : column;
+  gap: var(--gap);
+  padding: var(--padding);
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+  border-radius: 6px;
+  border-width: 2px;
+}
+
+.app {
+  display: flex;
+  flex-direction : row;
+  gap: var(--gap);
+  padding: var(--padding);
+  align-items:flex-start;
+  justify-items:space-between;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
